@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Calculator</title>
+<script type="text/javascript" src="script/jquery-1.12.0.min.js"></script>
+<style type="text/css">
+#calculator{
+	width: 300px;
+	height: 350px;
+	margin: 10px auto;
+	border: 1px solid;
+	border-radius: 2px;
+}
+#cal_display{
+	width: 97%;
+	height: 100px;
+	margin-left: 1%;
+}
+#operand input[type="button"], #operand input[type="clear"]{
+	width: 50px;
+	height: 50px;
+	margin: 2px;
+}
+
+#operator input[type="button"]{
+	margin: 2px;
+	width: 50px;
+	height: 100px;
+}
+#operand{
+	float: left;
+	margin: 10px auto;
+}
+#operator{
+	float: left;
+	margin: 10px auto;
+}
+</style>
+</head>
+<body>
+<div id="calculator">
+	<form name="cal">
+	<input type="text" name="result" id="cal_display" readonly />
+	<div id="operand">
+	<input type="button" id="one" name="num" value="1" OnClick="cal.result.value += 1" />
+	<input type="button" id="two" name="num" value="2" OnClick="cal.result.value += 2" />
+	<input type="button" id="three" name="num" value="3" OnClick="cal.result.value += 3" /><br>
+	<input type="button" id="four" name="num" value="4" OnClick="cal.result.value += 4" />
+	<input type="button" id="five" name="num" value="5" OnClick="cal.result.value += 5" />
+	<input type="button" id="six" name="num" value="6" OnClick="cal.result.value += 6" /><br>
+	<input type="button" id="seven" name="num" value="7" OnClick="cal.result.value += 7" />
+	<input type="button" id="eight" name="num" value="8" OnClick="cal.result.value += 8" />
+	<input type="button" id="nine" name="num" value="9" OnClick="cal.result.value +=9" /><br>
+	<input type="button" id="reset" name="reset" value="C" OnClick="cal.result.value = ''" />
+	<input type="button" id="zero" name="num" value="0" OnClick="cal.result.value += 0" />
+	<input type="button" id="equal" name="equal" value="=" OnClick="cal.result.value = eval(cal.result.value)" />
+	</div>
+	<div id="operator">
+	<input type="button" id="add" name="operator" value="+" OnClick="cal.result.value += '+'" />
+	<input type="button" id="sub" name="operator" value="-" OnClick="cal.result.value += '-'" /><br>
+	<input type="button" id="multiply" name="operator" value="*" OnClick="cal.result.value += '*'" />
+	<input type="button" id="divide" name="operator" value="/" OnClick="cal.result.value += '/'" />
+	</div>
+	</form>
+</div>
+</body>
+</html>
